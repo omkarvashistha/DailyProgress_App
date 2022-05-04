@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/nav_notes"
+        android:title="Notes"
+        android:icon="@drawable/notes"/>
+    <item
+        android:id="@+id/nav_daily_goals"
+        android:title="Goals"
+        android:icon="@drawable/temp_goals"/>
+    <item
+        android:id="@+id/nav_week_progress"
+        android:title="WeeklyProgress"
+        android:icon="@drawable/week_progress"/>
+    <item
+        android:id="@+id/nav_to_do_list"
+        android:title="To-DoList"
+        android:icon="@drawable/to_do_list"/>
+</menu>

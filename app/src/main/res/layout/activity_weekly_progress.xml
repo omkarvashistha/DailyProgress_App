@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeeklyProgress">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_weekly"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/add_notes_top_bar"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/back_btn_weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@drawable/back"
+            android:layout_weight="0.1"/>
+
+        <TextView
+            android:id="@+id/Add_notes_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Weekly Progress"
+            android:layout_weight="0.55"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/weekly_view_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout_weekly"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:padding="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:text="View ALl"
+            android:textSize="18sp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+ <!---                   POSITIVE                  -->
+    <LinearLayout
+        android:id="@+id/weekly_positive"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weekly_view_all"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POSITIVE :"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:background="@drawable/weekly_score_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/weekly_score_data_layout"
+                    android:padding="5dp"
+                    android:layout_weight="0.1"
+                    android:hint="Marks"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/weekly_score_data_layout"
+                    android:padding="5dp"
+                    android:layout_weight="0.9"
+                    android:hint="Reason"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <!---                   NEGATIVE                  -->
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/weekly_negative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weekly_positive"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEGATIVE :"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+
+            android:background="@drawable/weekly_score_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/weekly_score_data_layout"
+                    android:padding="5dp"
+                    android:layout_weight="0.1"
+                    android:hint="Marks"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                   />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/weekly_score_data_layout"
+                    android:padding="5dp"
+                    android:layout_weight="0.9"
+                    android:hint="Reason"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:menu="@menu/bottom_navigation"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".09"
+        android:background="@drawable/add_notes_top_bar"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@drawable/back"
+            android:layout_weight="0.1"/>
+
+        <TextView
+            android:id="@+id/Add_notes_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Your Notes"
+            android:layout_weight="0.55"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".88"
+        android:layout_margin="5dp"
+        app:layout_constraintVertical_bias="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ListView
+                android:id="@+id/notesList"
+                android:layout_width="match_parent"
+                android:layout_height="821dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="4.0sp"
+                android:nestedScrollingEnabled="true"/>
+
+            
+
+            <RelativeLayout
+                android:id="@+id/emptyView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/empty_photo_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/pencil" />
+
+                <TextView
+                    android:id="@+id/empty_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/empty_photo_image"
+                    android:layout_centerHorizontal="true"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:text="Looks a bit empty right now"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/empty_title"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="5dp"
+                    android:text="Click on the plus button"
+                    android:textColor="#3A3A3A"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/add_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="@id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@id/scrollView2">
+
+        <ImageButton
+            android:id="@+id/AddNotes"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/add_button_bg"
+            android:src="@drawable/edit"
+            android:textColor="#0C0C0C"
+            android:textSize="16sp"
+            app:backgroundTint="@color/black"
+            app:backgroundTintMode="screen" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:menu="@menu/bottom_navigation"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        android:layout_alignParentBottom="true"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

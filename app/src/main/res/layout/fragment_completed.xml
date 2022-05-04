@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompletedGoals">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/Goals_list_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_below="@id/linearLayout_goals"
+        android:layout_above="@id/bottomNavigationView">
+
+
+        <ListView
+            android:id="@+id/Completed_goals_list_view"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="4.0sp"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/completed_empty_view_goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/goals_empty_list_img"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/goal"/>
+
+            <TextView
+                android:id="@+id/empty_view_txt1"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/goals_empty_list_img"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="No Goals completed yet"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/empty_view_txt1"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Click on add icon"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

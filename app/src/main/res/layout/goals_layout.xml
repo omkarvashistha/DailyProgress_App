@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/goals_list_view_layout"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/Goal_title"
+        android:layout_width="243dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="Goal will be displayed here"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mark_complete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/mark_as_complete_btn_bg"
+        android:text="Mark Complete"
+        android:textColor="#070707"
+        app:backgroundTint="@color/black"
+        app:backgroundTintMode="screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goal_added_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="19 Feb 2022"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/Goal_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goal_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Not Complete"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Goal_title"
+        app:layout_constraintTop_toBottomOf="@+id/goal_added_date" />
+
+    <TextView
+        android:id="@+id/idTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:text="TextView"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/mark_complete_btn"
+        app:layout_constraintTop_toBottomOf="@+id/Goal_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

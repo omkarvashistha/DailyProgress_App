@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Goals">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_goals"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/add_notes_top_bar"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/back_btn_goals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@drawable/back"
+            android:layout_weight="0.1"/>
+
+        <TextView
+            android:id="@+id/Goals_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Your Goals"
+            android:layout_weight="0.9"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/goalsTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout_goals">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In-Progress"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/goalsViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goalsTabLayout"
+        android:layout_above="@id/bottomNavigationView">
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/AddGoals"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/add_button_bg"
+            android:src="@drawable/add"
+            android:textColor="#0C0C0C"
+            android:textSize="16sp"
+            app:backgroundTint="@color/black"
+            app:backgroundTintMode="screen" />
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:menu="@menu/bottom_navigation"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
